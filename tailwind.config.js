@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
 	darkMode: ["class"],
-	content: ["./src/**/*.{js,jsx,ts,tsx}"],
+	content: ["./src/**/*.{js,jsx,ts,tsx}", "./app/**/*.{js,jsx,ts,tsx}", "*.{js,ts,jsx,tsx,mdx}"],
 	theme: {
 	  extend: {
 		borderRadius: {
@@ -58,8 +58,13 @@ export default {
 			4: "hsl(var(--chart-4))",
 			5: "hsl(var(--chart-5))",
 		  },
+		  cream: {
+			// Custom cream color added
+			DEFAULT: "#FDFBF6",
+		  },
 		},
 	  },
 	},
 	plugins: [require("tailwindcss-animate")],
-  };
+  }
+  
