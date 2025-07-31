@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>
-      Designs by Abhishek - India's Premier Luxury Wedding Designer | Celebrity
-      Weddings | 18+ Years Experience
-    </title>
+    <title>Designs by Abhishek - Luxury Wedding Designer India</title>
 
     <meta
       name="robots"
@@ -379,8 +376,15 @@
 
     <!-- Google Fonts - Optimized Loading -->
     <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Italianno&family=Playfair+Display:ital,wght@0,300..900;1,300..900&display=swap"
+      crossorigin
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Italianno&family=Playfair+Display:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
+      crossorigin
     />
 
     <!-- Default (Light Mode) -->
@@ -417,8 +421,7 @@
     <meta name="msapplication-config" content="/browserconfig.xml" />
 
     <!-- Prefetch Critical Resources -->
-    <link rel="prefetch" href="/images/hero-background.jpg" />
-    <link rel="prefetch" href="/images/abhishek-kaushik-designer.jpg" />
+    <link rel="prefetch" href="/abhishek-w-bg-designsbyabhishek.jpeg" />
 
     <!-- Preload Critical CSS (if you have external CSS files) -->
     <!-- <link rel="preload" href="/css/critical.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
@@ -489,7 +492,7 @@
     </script>
 
     <!-- Facebook Pixel (Replace with your actual Pixel ID) -->
-    <script>
+    <!-- <script>
       !(function (f, b, e, v, n, t, s) {
         if (f.fbq) return;
         n = f.fbq = function () {
@@ -515,7 +518,7 @@
       );
       fbq("init", "FACEBOOK_PIXEL_ID");
       fbq("track", "PageView");
-    </script>
+    </script> -->
     <noscript
       ><img
         height="1"
@@ -587,13 +590,6 @@
               });
             }
           }, 0);
-        });
-      }
-
-      // Critical resource hints
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", function () {
-          navigator.serviceWorker.register("/sw.js");
         });
       }
     </script>
