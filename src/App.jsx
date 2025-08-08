@@ -5,10 +5,10 @@ import { useScroll, useTransform, motion } from "framer-motion";
 import HeroSection from "./components/HeroSection";
 import ServicesSection from "./components/ServicesSection";
 import PortfolioSection from "./components/PortfolioSection";
-import PressSection from "./components/PressSection";
 import ScenographySection from "./components/ScenographySection";
 import GraphicDesignSection from "./components/GraphicDesignSection";
 import ContactSection from "./components/ContactSection";
+import TestimonialsSection from "./components/TestimonialsSection";
 
 const App = () => {
   const scrollRef = useRef(null);
@@ -124,9 +124,9 @@ const App = () => {
         <HeroSection />
         <ServicesSection scrollY={scrollY} />
         <PortfolioSection />
-        <PressSection />
         <ScenographySection />
         <GraphicDesignSection />
+        <TestimonialsSection />
         <ContactSection />
       </div>
     </div>

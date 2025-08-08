@@ -85,22 +85,22 @@ const ServicesSection = ({ scrollY }) => {
           {
             title: "FLORAL ARCHITECTURE",
             description: "Flower designing; Sourcing; Art Installation",
-            image: "/floral-architecture.jpeg",
+            image: "/services/floral-architecture-designsbyabhishek.jpg",
           },
           {
             title: "CREATIVE CONCEPTS & DESIGN",
             description: "3D modelling, CAD Floor Plans; AI Designboards",
-            image: "/creative-concepts.jpeg",
+            image: "/services/3D-modelling-designsbyabhishek.jpg",
           },
           {
             title: "LIGHT DESIGN",
             description: "Thematic Ambience & Special effects",
-            image: "/light-design.png",
+            image: "/services/light-decoration-designsbyabhishek.jpg",
           },
           {
             title: "PRODUCTION & EXECUTION",
             description: "Space Transformation; Turnkey projects",
-            image: "/production-execution.png",
+            image: "/services/production-designsbyabhishek.jpg",
           },
         ].map((card, index) => (
           <motion.div

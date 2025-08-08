@@ -1,45 +1,128 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
+import React from "react";
+import SectionHeading from "./SectionHeading";
+import { motion } from "framer-motion";
+import Carousel from "@/components/ui/carousel"; // Corrected import
 
-const ScenographySection = () => {
-  const images = [
-    "/scenography-1.jpeg", // Corrected path
-    "/scenography-2.png",
-    "/scenography-3.png",
-    "/scenography-4.png",
-    "/scenography-5.png",
-    "/scenography-6.png",
-  ]
+const scenographyItems = [
+  {
+    src: "/scenography/grand-sangeet-decoration-designsbyabhishek.jpg",
+    title: "Grand Sangeet Decoration",
+  },
+  {
+    src: "/scenography/haldi-decoration-designsbyabhishek.jpg",
+    title: "Haldi Decoration",
+  },
+  {
+    src: "/scenography/musical-setup-designsbyabhishek.jpg",
+    title: "Musical Setup",
+  },
+  {
+    src: "/scenography/haldi-event-designsbyabhishek.jpg",
+    title: "Haldi Event",
+  },
+  {
+    src: "/scenography/sangeet-setup-designsbyabhishek.jpg",
+    title: "Sangeet Setup",
+  },
+  {
+    src: "/scenography/haldi-floral-decoration-designsbyabhishek.jpg",
+    title: "Haldi Floral Decoration",
+  },
+  {
+    src: "/scenography/wedding-hall-decoration-designsbyabhishek.jpg",
+    title: "Wedding Hall Decoration",
+  },
+  {
+    src: "/scenography/wedding-mandap-decoration-designsbyabhishek.jpg",
+    title: "Wedding Mandap Decoration",
+  },
+];
 
+export default function ScenographySection() {
   return (
-    <section className="w-full py-24 px-4 md:px-16 bg-cream min-h-screen">
-      <motion.h2
-        className="text-foreground text-5xl md:text-6xl font-bodoni font-light text-center mb-16"
+    <section
+      id="scenography"
+      className="relative w-full py-20 md:py-24 bg-cream overflow-hidden"
+    >
+      {/* Decorative motifs - more visible and animated */}
+      <motion.img
+        src="/images/flower-1-designsbyabhishek.png"
+        alt="Decorative flower — DesignsByAbhishek"
+        className="pointer-events-none select-none absolute left-0 md:left-8 top-10 w-36 md:w-48 opacity-20 z-10 rotate-12"
+        initial={{ rotate: 12, y: 0, scaleX: 1 }}
+        animate={{ rotate: 22, y: -15, scaleX: 1 }}
+        transition={{
+          duration: 6,
+          repeat: Infinity,
+          repeatType: "reverse",
+          ease: "easeInOut",
+        }}
+      />
+      <motion.img
+        src="/images/flower-1-designsbyabhishek.png"
+        alt="Decorative flower — DesignsByAbhishek"
+        className="pointer-events-none select-none absolute right-0 md:right-8 top-10 w-36 md:w-48 opacity-20 z-10 -rotate-12"
+        initial={{ rotate: -12, y: 0, scaleX: -1 }}
+        animate={{ rotate: -22, y: -15, scaleX: -1 }}
+        transition={{
+          duration: 6,
+          repeat: Infinity,
+          repeatType: "reverse",
+          ease: "easeInOut",
+        }}
+      />
+      <motion.img
+        src="/images/floral-designsbyabhishek.jpg"
+        alt="Decorative floral design — DesignsByAbhishek"
+        className="pointer-events-none select-none absolute left-0 top-1/2 w-48 opacity-20 z-0 -rotate-45"
+        initial={{ rotate: -45, scale: 1 }}
+        animate={{ rotate: -35, scale: 1.05 }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          repeatType: "reverse",
+          ease: "easeInOut",
+        }}
+      />
+      <motion.img
+        src="/images/leaf-3-designsbyabhishek.png"
+        alt="Decorative leaf — DesignsByAbhishek"
+        className="pointer-events-none select-none absolute right-0 bottom-0 w-28 opacity-30 z-0 -rotate-12"
+        initial={{ rotate: -12, y: 0 }}
+        animate={{ rotate: -2, y: 10 }}
+        transition={{
+          duration: 5.5,
+          repeat: Infinity,
+          repeatType: "reverse",
+          ease: "easeInOut",
+        }}
+      />
+
+      {/* Animated Section Heading */}
+      <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.3 }}
       >
-        Scenography / Art Installation
-      </motion.h2>
+        <SectionHeading
+          title="Scenography / Art Installation"
+          subtitle="DesignsByAbhishek — Immersive Spaces"
+        />
+      </motion.div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {images.map((src, index) => (
-          <motion.img
-            key={index}
-            src={src}
-            alt={`Scenography image ${index + 1}`}
-            className="w-full h-64 object-cover rounded-lg shadow-md"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6, delay: 0.1 * index }}
-          />
-        ))}
-      </div>
+      {/* Animated Carousel Container */}
+      <motion.div
+        className="mt-12 flex justify-center"
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <Carousel slides={scenographyItems} />
+      </motion.div>
     </section>
-  )
+  );
 }
-
-export default ScenographySection
