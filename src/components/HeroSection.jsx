@@ -83,7 +83,7 @@ export default function HeroSection() {
         <img
           src="/profile-images/abhishek-kaushik-image-4-designsbyabhishek.jpeg"
           alt="Abhishek Kaushik — DesignsByAbhishek Luxury Wedding Designer portrait"
-          className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-auto object-cover rounded-lg shadow-lg"
+          className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-auto object-cover rounded-lg shadow-lg mb-10"
           loading="eager"
           decoding="async"
         />
