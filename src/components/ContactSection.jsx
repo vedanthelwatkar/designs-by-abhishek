@@ -14,6 +14,7 @@ export default function ContactSection() {
     name: "",
     mobile: "",
     email: "",
+    message: "",
   });
 
   const [errors, setErrors] = useState({});
@@ -53,6 +54,15 @@ export default function ContactSection() {
       }
     }
 
+    // Message validation
+    if (!formData.message.trim()) {
+      newErrors.message = "Message is required";
+    } else if (formData.message.trim().length < 10) {
+      newErrors.message = "Message must be at least 10 characters";
+    } else if (formData.message.trim().length > 500) {
+      newErrors.message = "Message must be less than 500 characters";
+    }
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -84,7 +94,7 @@ export default function ContactSection() {
           from_email: formData.email,
           phone: formData.mobile,
           service: "General Contact",
-          message: `New contact form submission from ${formData.name}. Phone: ${formData.mobile}, Email: ${formData.email}`,
+          message: formData.message,
         },
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       );
@@ -98,7 +108,7 @@ export default function ContactSection() {
 
         // Reset form after successful submission
         setTimeout(() => {
-          setFormData({ name: "", mobile: "", email: "" });
+          setFormData({ name: "", mobile: "", email: "", message: "" });
           setIsSubmitted(false);
         }, 3000);
       } else {
@@ -313,6 +323,35 @@ export default function ContactSection() {
                 {errors.email && (
                   <p className="text-sm text-red-600">{errors.email}</p>
                 )}
+              </div>
+
+              <div className="space-y-2">
+                <Label
+                  htmlFor="message"
+                  className="text-sm font-medium text-gray-800"
+                >
+                  Message *
+                </Label>
+                <textarea
+                  id="message"
+                  value={formData.message}
+                  onChange={(e) => handleInputChange("message", e.target.value)}
+                  placeholder="Tell us about your project, event, or any specific requirements..."
+                  rows={4}
+                  className={`w-full bg-white border-2 text-gray-900 placeholder:text-gray-500 focus:border-amber-400 focus:ring-amber-400/20 rounded-md px-3 py-2 resize-none ${
+                    errors.message
+                      ? "border-red-400 focus:border-red-400"
+                      : "border-gray-200"
+                  }`}
+                />
+                <div className="flex justify-between items-center">
+                  {errors.message && (
+                    <p className="text-sm text-red-600">{errors.message}</p>
+                  )}
+                  <p className="text-xs text-gray-500 ml-auto">
+                    {formData.message.length}/500 characters
+                  </p>
+                </div>
               </div>
 
               <Button
