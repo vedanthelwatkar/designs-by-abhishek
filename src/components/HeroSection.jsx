@@ -57,9 +57,9 @@ const HeroSection = () => {
         transition={{ duration: 0.8, delay: 0.8 }}
       >
         <img
-          src="/hero-designsbyabhishek.jpeg" // Corrected path
+          src="/profile-images/abhishek-kaushik-wedding-designer-designsbyabhishek.jpeg"
           alt="Abhishek Kaushik"
-          className="w-full max-w-md h-auto object-cover rounded-lg shadow-lg"
+          className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-auto object-cover rounded-lg shadow-lg"
         />
       </motion.div>
     </section>

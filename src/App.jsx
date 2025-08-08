@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { useScroll, useTransform } from "framer-motion";
+import { useScroll, useTransform, motion } from "framer-motion";
 import HeroSection from "./components/HeroSection";
 import ServicesSection from "./components/ServicesSection";
 import PortfolioSection from "./components/PortfolioSection";
@@ -17,21 +17,25 @@ const App = () => {
     offset: ["start start", "end end"],
   });
 
+  // Hero background image parallax and fade
   const bgImageY = useTransform(scrollYProgress, [0, 0.5], ["0%", "50%"]);
   const bgImageOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
 
+  // "designs by ABHISHEK" text reveal - Simplified for mobile
   const textOpacity = useTransform(scrollYProgress, [0.1, 0.3], [0, 1]);
   const textY = useTransform(scrollYProgress, [0.1, 0.3], ["30px", "0px"]);
 
   return (
     <div className="w-full bg-cream">
+      {/* Hero Section - Sticky with standard viewport height */}
       <div
         ref={scrollRef}
-        className="sticky top-0 h-dvh flex items-center justify-center overflow-hidden z-10"
+        className="sticky top-0 h-screen flex items-center justify-center overflow-hidden z-10"
       >
+        {/* Background Image */}
         <div className="absolute inset-0 w-full h-full z-0">
           <img
-            src="/abhishek-w-bg-designsbyabhishek.jpeg"
+            src="/profile-images/abhishek-kaushik-wedding-designer-designsbyabhishek.jpeg"
             alt="Hero Background"
             className="w-full h-full object-cover object-center"
             style={{
@@ -52,24 +56,13 @@ const App = () => {
               e.target.parentElement.style.backgroundColor = "#8B4513";
             }}
           />
+          {/* Dark overlay for better text readability */}
           <div className="absolute inset-0 bg-black/40 z-10"></div>
         </div>
-
-        <div className="absolute top-4 left-4 md:top-8 md:left-8 z-20">
-          <div className="w-8 h-8 md:w-12 md:h-12 border-l-2 border-t-2 border-white/60"></div>
-        </div>
-        <div className="absolute top-4 right-4 md:top-8 md:right-8 z-20">
-          <div className="w-8 h-8 md:w-12 md:h-12 border-r-2 border-t-2 border-white/60"></div>
-        </div>
-        <div className="absolute bottom-4 left-4 md:bottom-8 md:left-8 z-20">
-          <div className="w-8 h-8 md:w-12 md:h-12 border-l-2 border-b-2 border-white/60"></div>
-        </div>
-        <div className="absolute bottom-4 right-4 md:bottom-8 md:right-8 z-20">
-          <div className="w-8 h-8 md:w-12 md:h-12 border-r-2 border-b-2 border-white/60"></div>
-        </div>
-
+        {/* "designs by ABHISHEK" text overlay - Simplified for mobile */}
         <div className="absolute inset-0 flex items-center justify-center z-30 px-4">
           <div className="text-center w-full max-w-4xl">
+            {/* Mobile-first approach with system font fallbacks */}
             <div
               className="text-white font-light mb-2 md:mb-4"
               style={{
@@ -93,6 +86,7 @@ const App = () => {
             >
               ABHISHEK
             </div>
+            {/* Subtitle */}
             <div
               className="text-white/90 font-light mt-2 md:mt-4"
               style={{
@@ -106,6 +100,7 @@ const App = () => {
           </div>
         </div>
 
+        {/* Scroll indicator - Simplified */}
         <div className="absolute bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 text-white/70 z-30">
           <div className="flex flex-col items-center">
             <span
@@ -124,6 +119,7 @@ const App = () => {
         </div>
       </div>
 
+      {/* Content Sections */}
       <div className="relative z-20 bg-cream">
         <HeroSection />
         <ServicesSection scrollY={scrollY} />
