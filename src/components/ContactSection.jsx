@@ -141,7 +141,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative w-full py-20 md:py-24 px-4 md:px-16 bg-gradient-to-br from-orange-50 to-amber-50 min-h-[60vh] flex flex-col lg:flex-row items-center justify-center gap-10 overflow-hidden"
+      className="relative w-full py-20 md:py-24 px-4 md:px-16 bg-background min-h-[60vh] flex flex-col lg:flex-row items-center justify-center gap-10 overflow-hidden"
     >
       {/* Decorative motifs */}
       <img
@@ -158,7 +158,7 @@ export default function ContactSection() {
       {/* Contact Info */}
       <div className="lg:w-1/2 text-center lg:text-left">
         <motion.h3
-          className="text-gray-800 text-4xl md:text-5xl font-bodoni font-light mb-6"
+          className="text-light text-4xl md:text-5xl font-dream font-light mb-6"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
@@ -178,7 +178,7 @@ export default function ContactSection() {
           <img
             src="/logo-designsbyabhishek.png"
             alt="DesignsByAbhishek Logo"
-            className="w-32 h-32 md:w-40 md:h-40 object-contain rounded-full shadow-lg bg-white/80 p-2"
+            className="w-32 h-32 md:w-40 md:h-40 object-contain rounded-full shadow-lg bg-light/80 p-2"
           />
         </motion.div>
 
@@ -189,8 +189,8 @@ export default function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.5 }}
           >
-            <Instagram className="text-gray-700" aria-hidden="true" />
-            <span aria-label="Instagram handle" className="text-gray-700">
+            <Instagram className="text-light" aria-hidden="true" />
+            <span aria-label="Instagram handle" className="text-light">
               @designsbyabhishek
             </span>
           </motion.div>
@@ -201,8 +201,8 @@ export default function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.5 }}
           >
-            <Globe className="text-gray-700" aria-hidden="true" />
-            <span className="text-gray-700">www.designsbyabhishek.com</span>
+            <Globe className="text-light" aria-hidden="true" />
+            <span className="text-light">www.designsbyabhishek.com</span>
           </motion.div>
 
           <motion.div
@@ -211,8 +211,8 @@ export default function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.5 }}
           >
-            <Mail className="text-gray-700" aria-hidden="true" />
-            <span className="text-gray-700">Designsbyabhishek@gmail.com</span>
+            <Mail className="text-light" aria-hidden="true" />
+            <span className="text-light">Designsbyabhishek@gmail.com</span>
           </motion.div>
 
           <motion.div
@@ -221,8 +221,8 @@ export default function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.5 }}
           >
-            <Phone className="text-gray-700" aria-hidden="true" />
-            <span className="text-gray-700">
+            <Phone className="text-light" aria-hidden="true" />
+            <span className="text-light">
               +91 935 66666 44 / +91 62 83734262
             </span>
           </motion.div>
@@ -237,8 +237,8 @@ export default function ContactSection() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-white/50">
-          <h4 className="text-2xl font-bodoni font-light mb-6 text-center text-gray-800">
+        <div className="bg-light/90 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-light/50">
+          <h4 className="text-2xl font-dream font-light mb-6 text-center text-background">
             Contact Form
           </h4>
 
@@ -259,10 +259,11 @@ export default function ContactSection() {
             </motion.div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Name Field */}
               <div className="space-y-2">
                 <Label
                   htmlFor="name"
-                  className="text-sm font-medium text-gray-800"
+                  className="text-sm font-medium text-background"
                 >
                   Full Name *
                 </Label>
@@ -272,10 +273,8 @@ export default function ContactSection() {
                   value={formData.name}
                   onChange={(e) => handleInputChange("name", e.target.value)}
                   placeholder="Enter your full name"
-                  className={`w-full bg-white border-2 text-gray-900 placeholder:text-gray-500 focus:border-amber-400 focus:ring-amber-400/20 ${
-                    errors.name
-                      ? "border-red-400 focus:border-red-400"
-                      : "border-gray-200"
+                  className={`w-full bg-light border rounded-md text-background placeholder:text-background/50 focus:border-background focus:outline-none focus-visible:ring-0 focus-visible:ring-offset-0  ${
+                    errors.name ? "border-red-500" : "border-gray-300"
                   }`}
                 />
                 {errors.name && (
@@ -283,10 +282,11 @@ export default function ContactSection() {
                 )}
               </div>
 
+              {/* Mobile Field */}
               <div className="space-y-2">
                 <Label
                   htmlFor="mobile"
-                  className="text-sm font-medium text-gray-800"
+                  className="text-sm font-medium text-background"
                 >
                   Mobile Number *
                 </Label>
@@ -296,10 +296,8 @@ export default function ContactSection() {
                   value={formData.mobile}
                   onChange={(e) => handleInputChange("mobile", e.target.value)}
                   placeholder="+91 98765 43210"
-                  className={`w-full bg-white border-2 text-gray-900 placeholder:text-gray-500 focus:border-amber-400 focus:ring-amber-400/20 ${
-                    errors.mobile
-                      ? "border-red-400 focus:border-red-400"
-                      : "border-gray-200"
+                  className={`w-full bg-light border rounded-md text-background placeholder:text-background/50 focus:border-background focus:outline-none focus-visible:ring-0 focus-visible:ring-offset-0  ${
+                    errors.mobile ? "border-red-500" : "border-gray-300"
                   }`}
                 />
                 {errors.mobile && (
@@ -307,10 +305,11 @@ export default function ContactSection() {
                 )}
               </div>
 
+              {/* Email Field */}
               <div className="space-y-2">
                 <Label
                   htmlFor="email"
-                  className="text-sm font-medium text-gray-800"
+                  className="text-sm font-medium text-background"
                 >
                   Email Address *
                 </Label>
@@ -320,10 +319,8 @@ export default function ContactSection() {
                   value={formData.email}
                   onChange={(e) => handleInputChange("email", e.target.value)}
                   placeholder="your.email@gmail.com"
-                  className={`w-full bg-white border-2 text-gray-900 placeholder:text-gray-500 focus:border-amber-400 focus:ring-amber-400/20 ${
-                    errors.email
-                      ? "border-red-400 focus:border-red-400"
-                      : "border-gray-200"
+                  className={`w-full bg-light border rounded-md text-background placeholder:text-background/50 focus:border-background focus:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 ${
+                    errors.email ? "border-red-500" : "border-gray-300"
                   }`}
                 />
                 {errors.email && (
@@ -331,10 +328,11 @@ export default function ContactSection() {
                 )}
               </div>
 
+              {/* Message Field */}
               <div className="space-y-2">
                 <Label
                   htmlFor="message"
-                  className="text-sm font-medium text-gray-800"
+                  className="text-sm font-medium text-background"
                 >
                   Message *
                 </Label>
@@ -344,17 +342,15 @@ export default function ContactSection() {
                   onChange={(e) => handleInputChange("message", e.target.value)}
                   placeholder="Tell us about your project, event, or any specific requirements..."
                   rows={4}
-                  className={`w-full bg-white border-2 text-gray-900 placeholder:text-gray-500 focus:border-amber-400 focus:ring-amber-400/20 rounded-md px-3 py-2 resize-none ${
-                    errors.message
-                      ? "border-red-400 focus:border-red-400"
-                      : "border-gray-200"
+                  className={`w-full bg-light border rounded-md text-background placeholder:text-background/50 focus:border-background focus:outline-none focus-visible:ring-0 focus-visible:ring-offset-0  resize-none px-3 py-2 ${
+                    errors.message ? "border-red-500" : "border-gray-300"
                   }`}
                 />
                 <div className="flex justify-between items-center">
                   {errors.message && (
                     <p className="text-sm text-red-600">{errors.message}</p>
                   )}
-                  <p className="text-xs text-gray-500 ml-auto">
+                  <p className="text-xs text-background ml-auto">
                     {formData.message.length}/500 characters
                   </p>
                 </div>
@@ -363,11 +359,11 @@ export default function ContactSection() {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-semibold py-3 rounded-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg border-2 border-amber-300 hover:border-amber-400 focus:ring-4 focus:ring-amber-200"
+                className="w-full bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-semibold py-3 rounded-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg border border-amber-300 hover:border-background focus:ring-4 focus:ring-amber-200"
               >
                 {isSubmitting ? (
                   <div className="flex items-center gap-2">
-                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                    <div className="w-4 h-4 border border-light border-t-transparent rounded-full animate-spin"></div>
                     Sending...
                   </div>
                 ) : (

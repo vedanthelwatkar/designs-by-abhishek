@@ -26,7 +26,7 @@ const App = () => {
   const textY = useTransform(scrollYProgress, [0.1, 0.3], ["30px", "0px"]);
 
   return (
-    <div className="w-full bg-cream">
+    <div className="w-full bg-light">
       {/* Hero Section - Sticky with standard viewport height */}
       <div
         ref={scrollRef}
@@ -61,34 +61,41 @@ const App = () => {
         </div>
         {/* "designs by ABHISHEK" text overlay - Simplified for mobile */}
         <div className="absolute inset-0 flex items-center justify-center z-30 px-4">
-          <div className="text-center w-full max-w-4xl">
+          <div className="text-center">
             {/* Mobile-first approach with system font fallbacks */}
             <div
-              className="text-white font-light mb-2 md:mb-4"
+              className="text-white font-brittany flex items-start justify-start -ml-4"
               style={{
-                fontSize: "clamp(1.5rem, 6vw, 4rem)",
-                fontFamily: "Italianno, cursive, serif",
-                textShadow: "2px 2px 4px rgba(0,0,0,0.8)",
-                lineHeight: "1.2",
+                fontSize: "clamp(0.5rem, 4vw, 1.5rem)",
               }}
             >
-              designs by
+              Designs by
             </div>
             <div
-              className="text-white font-light leading-none"
-              style={{
-                fontSize: "clamp(2.5rem, 12vw, 8rem)",
-                fontFamily: "Bodoni Moda, serif, Georgia",
-                textShadow: "2px 2px 4px rgba(0,0,0,0.8)",
-                lineHeight: "0.9",
-                letterSpacing: "-0.02em",
-              }}
+              className="text-white font-bebas leading-none w-full flex justify-start -ml-10 -mb-9"
+              style={{ fontSize: "clamp(3rem, 10vw, 4rem)" }}
             >
               ABHISHEK
             </div>
+
+            <div className="leading-none">
+              <span
+                className="inline-block align-baseline text-white font-light font-dream tracking-tighter"
+                style={{ fontSize: "clamp(4.5rem, 14vw, 10rem)" }}
+              >
+                PORT
+              </span>
+              <span
+                className="inline-block align-baseline text-white font-light italic font-notoSerif relative top-[0.06em] tracking-tighter"
+                style={{ fontSize: "clamp(4rem, 14.5vw, 10.5rem)" }}
+              >
+                folio
+              </span>
+            </div>
+
             {/* Subtitle */}
             <div
-              className="text-white/90 font-light mt-2 md:mt-4"
+              className="text-white/90 font-light"
               style={{
                 fontSize: "clamp(0.875rem, 3vw, 1.5rem)",
                 fontFamily: "Cormorant Garamond, serif, Georgia",
@@ -120,7 +127,7 @@ const App = () => {
       </div>
 
       {/* Content Sections */}
-      <div className="relative z-20 bg-cream">
+      <div className="relative z-20 bg-light">
         <HeroSection />
         <ServicesSection scrollY={scrollY} />
         <PortfolioSection />

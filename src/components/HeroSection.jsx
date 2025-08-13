@@ -7,7 +7,7 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative w-full min-h-screen px-4 md:px-16 flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-20 bg-cream overflow-hidden"
+      className="relative w-full min-h-screen px-4 md:px-16 flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-20 bg-background overflow-hidden"
       aria-label="DesignsByAbhishek — Luxury Wedding Designer Hero Section"
     >
       {/* Decorative motifs (only the 4 approved images) */}
@@ -31,7 +31,7 @@ export default function HeroSection() {
       {/* Text block */}
       <div className="lg:w-1/2 text-center lg:text-left">
         <motion.h1
-          className="text-foreground text-5xl md:text-6xl font-italianno font-medium mb-3 leading-tight"
+          className="text-light text-5xl md:text-6xl font-italianno font-medium mb-3 leading-tight hidden lg:flex"
           initial={prefersReduced ? false : { opacity: 0, y: 20 }}
           whileInView={prefersReduced ? {} : { opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
@@ -41,7 +41,7 @@ export default function HeroSection() {
         </motion.h1>
 
         <motion.h2
-          className="text-foreground/90 text-xl md:text-2xl font-cormorant tracking-wide"
+          className="text-light/90 text-xl md:text-2xl font-cormorant tracking-wide"
           initial={prefersReduced ? false : { opacity: 0, y: 20 }}
           whileInView={prefersReduced ? {} : { opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
@@ -50,7 +50,7 @@ export default function HeroSection() {
           Luxury Wedding Designer — DesignsByAbhishek
         </motion.h2>
         <motion.p
-          className="text-foreground text-base md:text-lg font-cormorant leading-relaxed max-w-2xl mx-auto lg:mx-0"
+          className="text-light text-base md:text-lg font-cormorant leading-relaxed max-w-2xl mx-auto lg:mx-0"
           initial={prefersReduced ? false : { opacity: 0, y: 20 }}
           whileInView={prefersReduced ? {} : { opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
@@ -68,8 +68,8 @@ export default function HeroSection() {
         </motion.p>
       </div>
       <img
-        src="/abhishek-kaushik-achievements-designsbyabhishek.jpg"
-        className="w-40 h-40 mix-blend-multiply"
+        src="/abhishek-kaushik-achievements-designsbyabhishek.png"
+        className="w-40 h-40"
       />
 
       {/* Portrait (from your public folder path) */}

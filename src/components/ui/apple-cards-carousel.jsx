@@ -186,7 +186,7 @@ export const Card = ({ card, index, layout = false }) => {
               </motion.p>
               <motion.p
                 layoutId={layout ? `title-${card.title}` : undefined}
-                className="mt-4 text-2xl font-semibold text-neutral-700 md:text-5xl dark:text-white font-bodoni"
+                className="mt-4 text-2xl font-semibold text-neutral-700 md:text-5xl dark:text-white font-dream"
               >
                 {card.title}
               </motion.p>
@@ -210,7 +210,7 @@ export const Card = ({ card, index, layout = false }) => {
           </motion.p>
           <motion.p
             layoutId={layout ? `title-${card.title}` : undefined}
-            className="mt-2 max-w-xs text-left text-xl font-semibold [text-wrap:balance] text-white md:text-3xl font-bodoni"
+            className="mt-2 max-w-xs text-left text-xl font-semibold [text-wrap:balance] text-white md:text-3xl font-dream"
           >
             {card.title}
           </motion.p>

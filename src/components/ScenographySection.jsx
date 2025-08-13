@@ -8,35 +8,27 @@ import Carousel from "@/components/ui/carousel"; // Corrected import
 const scenographyItems = [
   {
     src: "/scenography/grand-sangeet-decoration-designsbyabhishek.jpg",
-    title: "Grand Sangeet Decoration",
   },
   {
     src: "/scenography/haldi-decoration-designsbyabhishek.jpg",
-    title: "Haldi Decoration",
   },
   {
     src: "/scenography/musical-setup-designsbyabhishek.jpg",
-    title: "Musical Setup",
   },
   {
     src: "/scenography/haldi-event-designsbyabhishek.jpg",
-    title: "Haldi Event",
   },
   {
     src: "/scenography/sangeet-setup-designsbyabhishek.jpg",
-    title: "Sangeet Setup",
   },
   {
     src: "/scenography/haldi-floral-decoration-designsbyabhishek.jpg",
-    title: "Haldi Floral Decoration",
   },
   {
     src: "/scenography/wedding-hall-decoration-designsbyabhishek.jpg",
-    title: "Wedding Hall Decoration",
   },
   {
     src: "/scenography/wedding-mandap-decoration-designsbyabhishek.jpg",
-    title: "Wedding Mandap Decoration",
   },
 ];
 
@@ -44,7 +36,7 @@ export default function ScenographySection() {
   return (
     <section
       id="scenography"
-      className="relative w-full py-20 md:py-24 bg-cream overflow-hidden"
+      className="relative w-full py-20 md:py-24 bg-light overflow-hidden"
     >
       {/* Decorative motifs - more visible and animated */}
       <motion.img
@@ -74,7 +66,7 @@ export default function ScenographySection() {
         }}
       />
       <motion.img
-        src="/images/floral-designsbyabhishek.jpg"
+        src="/images/floral-designsbyabhishek.png"
         alt="Decorative floral design — DesignsByAbhishek"
         className="pointer-events-none select-none absolute left-0 top-1/2 w-48 opacity-20 z-0 -rotate-45"
         initial={{ rotate: -45, scale: 1 }}

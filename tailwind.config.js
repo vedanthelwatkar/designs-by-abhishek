@@ -16,21 +16,23 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        bodoni: ["Bodoni Moda", "serif"],
         cormorant: ["Cormorant Garamond", "serif"],
-        italianno: ["Italianno", "cursive"],
+        dream: ["Dream Avenue", "sans-serif"],
+        brittany: ["Brittany", "sans-serif"],
+        notoSerif: ["Noto Serif Display", "sans-serif"],
+        bebas: ["'Bebas Neue'", "sans-serif"],
       },
       letterSpacing: {
         ultra: "-0.1em",
       },
       colors: {
-        cream: {
-          DEFAULT: "#FDFBF6",
-        },
         foreground: "hsl(26 26 26)",
-        background: "hsl(25 25 25)",
+        background: "#532200",
+        light: "#EFCFA0",
+        burnt: "#914110",
+        gold: "#E1A140",
         primary: {
-          DEFAULT: "hsl(25 25 25)",
+          DEFAULT: "#532200",
           foreground: "hsl(0 0% 100%)",
         },
         secondary: {

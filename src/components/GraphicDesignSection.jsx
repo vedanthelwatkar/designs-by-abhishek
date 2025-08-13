@@ -78,10 +78,10 @@ export default function GraphicDesignSection() {
   return (
     <section
       id="graphic-design"
-      className="relative w-full py-20 md:py-24 px-4 md:px-16 bg-cream overflow-hidden"
+      className="relative w-full py-20 md:py-24 px-4 md:px-16 bg-background overflow-hidden"
     >
       {/* Decorative motifs - significantly more visible and animated */}
-      <motion.img
+      {/* <motion.img
         src="/images/floral-designsbyabhishek.jpg"
         alt="Decorative floral design — DesignsByAbhishek"
         className="pointer-events-none select-none absolute left-0 top-1/4 w-64 md:w-80 opacity-40 z-0 -rotate-45"
@@ -93,7 +93,7 @@ export default function GraphicDesignSection() {
           repeatType: "reverse",
           ease: "easeInOut",
         }}
-      />
+      /> */}
       <motion.img
         src="/images/leaf-1-desingsbyabhishek.png"
         alt="Decorative leaf — DesignsByAbhishek"
@@ -112,6 +112,7 @@ export default function GraphicDesignSection() {
         <SectionHeading
           title="Graphic Design 3D"
           subtitle="DesignsByAbhishek — Concept Visualizations"
+          mode="light"
         />
 
         {/* Mobile: Horizontal Scrolling Carousel */}

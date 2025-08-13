@@ -22,7 +22,7 @@ export default function SpotlightCard({ src, alt, title, description, delay }) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className={cn(
-        "relative group overflow-hidden rounded-lg shadow-xl bg-white border border-gray-100 cursor-pointer",
+        "relative group overflow-hidden rounded-lg shadow-xl bg-light border border-gold cursor-pointer",
         "aspect-video md:aspect-[4/3] lg:aspect-square" // Maintain aspect ratio
       )}
       initial={{ opacity: 0, y: 20 }}
@@ -55,7 +55,7 @@ export default function SpotlightCard({ src, alt, title, description, delay }) {
       {/* Content Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500">
         <motion.h3
-          className="font-bold text-xl font-bodoni"
+          className="font-bold text-xl font-dream"
           initial={{ y: 20, opacity: 0 }}
           animate={isHovered ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
           transition={{ delay: 0.1, duration: 0.3 }}

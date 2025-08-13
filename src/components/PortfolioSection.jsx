@@ -75,7 +75,7 @@ export default function PortfolioSection() {
   return (
     <section
       id="portfolio"
-      className="relative w-full py-20 md:py-24 bg-cream overflow-hidden"
+      className="relative w-full py-20 md:py-24 bg-background overflow-hidden"
     >
       {/* Decorative motifs - more visible and animated */}
       <motion.img
@@ -121,6 +121,7 @@ export default function PortfolioSection() {
       <SectionHeading
         title="Portfolio"
         subtitle="DesignsByAbhishek — Selected Works"
+        mode="light"
       />
 
       <div className="flex justify-center w-full">

@@ -70,7 +70,7 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="relative w-full py-20 md:py-24 bg-gradient-to-b from-cream to-white overflow-hidden">
+    <section className="relative w-full py-20 md:py-24 bg-light overflow-hidden">
       {/* Decorative background elements */}
       <motion.div
         className="absolute inset-0 opacity-5"
@@ -79,8 +79,8 @@ export default function TestimonialsSection() {
         transition={{ duration: 2 }}
       >
         <div className="absolute top-10 left-10 w-32 h-32 bg-gold rounded-full blur-3xl"></div>
-        <div className="absolute bottom-10 right-10 w-40 h-40 bg-rose-300 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-emerald-200 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 right-10 w-40 h-40 bg-light rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-lightrounded-full blur-3xl"></div>
       </motion.div>
 
       <div className="relative z-10">
@@ -106,7 +106,7 @@ export default function TestimonialsSection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <p className="text-lg text-gray-600 mb-6">
+          <p className="text-lg text-background mb-6">
             Ready to create your own unforgettable experience?
           </p>
         </motion.div>

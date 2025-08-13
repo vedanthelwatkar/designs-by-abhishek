@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Dream Avenue";
+  src: url("/src/assets/fonts/Dream-Avenue.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Brittany";
+  src: url("/src/assets/fonts/Brittany.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -38,7 +52,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-cream text-foreground;
+    @apply bg-light text-foreground;
     font-family: "Cormorant Garamond", serif, Georgia, "Times New Roman", Times,
       serif;
     -webkit-font-smoothing: antialiased;

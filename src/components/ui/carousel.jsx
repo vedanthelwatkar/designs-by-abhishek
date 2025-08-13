@@ -89,7 +89,7 @@ const Slide = ({ slide, index, current, handleSlideClick }) => {
             current === index ? "opacity-100 visible" : "opacity-0 invisible"
           }`}
         >
-          <h2 className="text-lg md:text-2xl lg:text-4xl font-semibold relative font-bodoni">
+          <h2 className="text-lg md:text-2xl lg:text-4xl font-semibold relative font-dream">
             {title}
           </h2>
         </article>
