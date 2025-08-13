@@ -27,10 +27,10 @@ export default {
       },
       colors: {
         foreground: "hsl(26 26 26)",
-        background: "#532200",
-        light: "#EFCFA0",
-        burnt: "#914110",
-        gold: "#E1A140",
+        background: "#201A1E",
+        light: "#D0B49F",
+        burnt: "#E4D4C8",
+        gold: "#E2E6E7",
         primary: {
           DEFAULT: "#532200",
           foreground: "hsl(0 0% 100%)",
