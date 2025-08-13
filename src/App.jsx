@@ -72,7 +72,7 @@ const App = () => {
               Designs by
             </div>
             <div
-              className="text-white font-bebas leading-none w-full flex justify-start -ml-10 -mb-9"
+              className="text-white font-bebas leading-none w-full flex justify-start -ml-4 sm:-ml-7 sm:-mb-7 lg:-ml-10 -mb-3 lg:-mb-9"
               style={{ fontSize: "clamp(3rem, 10vw, 4rem)" }}
             >
               ABHISHEK
