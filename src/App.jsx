@@ -9,6 +9,7 @@ import ScenographySection from "./components/ScenographySection";
 import GraphicDesignSection from "./components/GraphicDesignSection";
 import ContactSection from "./components/ContactSection";
 import TestimonialsSection from "./components/TestimonialsSection";
+import ColorPickerComponent from "./components/ColorPickerComponent";
 
 const App = () => {
   const scrollRef = useRef(null);
@@ -128,6 +129,7 @@ const App = () => {
 
       {/* Content Sections */}
       <div className="relative z-20 bg-light">
+        <ColorPickerComponent />
         <HeroSection />
         <ServicesSection scrollY={scrollY} />
         <PortfolioSection />
